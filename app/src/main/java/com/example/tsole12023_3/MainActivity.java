@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         listaAlumnos.setVerticalSpacing(20);
         listaAlumnos.setHorizontalSpacing(20);
         setContentView(listaAlumnos);
+        listaAlumnos.setAdapter(adapter);
         listaAlumnos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
