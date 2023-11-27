@@ -12,7 +12,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    String nombre;
     public static final String EXTRA = "eleccion";
     String[] alumnos = {
             "Zoila Plaza",
