@@ -23,7 +23,7 @@ public class MainActivity3 extends AppCompatActivity {
         int nWinner = intent.getIntExtra(MainActivity2.NOTA, 0);
         notaWinner.setText(String.valueOf(nWinner));
 
-        String ruta = "fuentes/Winner.ttf";
+        String ruta = "fuentes/WINNER.ttf";
         Typeface fuente = Typeface.createFromAsset(getAssets(),ruta);
         msjWinner.setTypeface(fuente);
     }

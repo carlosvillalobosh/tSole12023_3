@@ -9,8 +9,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    String nombre;
     public static final String EXTRA = "eleccion";
     String[] alumnos = {
             "Zoila Plaza",
@@ -38,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(view.getContext(), MainActivity2.class);
-                intent.putExtra(EXTRA, alumnos);
+                intent.putExtra(EXTRA, alumnos[i]);
                 startActivity(intent);
             }
         });

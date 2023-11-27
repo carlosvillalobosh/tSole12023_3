@@ -15,8 +15,8 @@ public class MainActivity2 extends AppCompatActivity {
   TextView alumno;
   String eleccion;
   Intent intent2;
+  Intent intent3;
   public static final String NOTA="nota", SEL = "sel";
-
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,7 @@ public class MainActivity2 extends AppCompatActivity {
     alumno = (TextView)findViewById(R.id.alumno);
     alumno.setText(eleccion);
     intent2 = new Intent(this, MainActivity3.class);
+    intent3 = new Intent(this, MainActivity4.class);
     enviar.setOnClickListener(calc);
   }
 
@@ -47,10 +48,12 @@ public class MainActivity2 extends AppCompatActivity {
 
       if (nf >= 40) {
         intent2.putExtra(NOTA, nf);
+        intent2.putExtra(SEL, eleccion);
           startActivity(intent2);
       } else {
-        intent2.putExtra(NOTA, nf);
-          startActivity(intent2);
+        intent3.putExtra(NOTA, nf);
+        intent3.putExtra(SEL, eleccion);
+          startActivity(intent3);
       }
 
     }
